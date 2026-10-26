@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretty Eyes - Trabajo Práctico Escolar</title>
+    <!-- Tailwind CSS para el diseño -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-serif-custom {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* TÍTULO GRANDE CON LETRAS CELESTES BRILLANTES Y RESPLANDOR NEÓN */
+        .titulo-celeste-brillante {
+            color: #38bdf8 !important;
+            font-size: 4rem !important; /* Tamaño gigante */
+            font-weight: 800 !important;
+            text-align: center !important;
+            padding: 10px 20px !important;
+            display: inline-block !important;
+            margin: 10px 0 !important;
+            /* Efecto de brillo celeste luminoso */
+            text-shadow: 
+                0 0 10px #38bdf8,
+                0 0 20px #38bdf8,
+                0 0 30px #0ea5e9,
+                0 0 40px #0284c7 !important;
+        }
+
+        /* FONDO CENTRAL EN PLATEADO CLARO ELEGANTE CON DESTELLOS BRILLANTES */
+        .fondo-brilloso-centro {
+            background-color: #e2e8f0 !important;
+            background-image: 
+                radial-gradient(rgba(255, 255, 255, 0.9) 1.5px, transparent 1.5px),
+                radial-gradient(rgba(148, 163, 184, 0.4) 1px, transparent 1px) !important;
+            background-size: 20px 20px, 10px 10px !important;
+            background-position: 0 0, 5px 5px !important;
+        }
+    </style>
+</head>
+<body class="fondo-brilloso-centro text-stone-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Encabezado Principal con Título en Letra Celeste Brillante -->
+    <header class="bg-stone-900 text-stone-100 shadow-lg border-b border-stone-800 py-8 px-4 text-center">
+        <h1 class="titulo-celeste-brillante font-serif-custom">Pretty Eyes</h1>
+        <p class="text-stone-300 text-sm sm:text-base mt-2">Estilo, tendencia y la mejor visión para tus ojos</p>
+        
+        <nav class="mt-6">
+            <ul class="flex justify-center gap-6 text-sm font-medium">
+                <li><a href="#inicio" class="hover:text-sky-300 transition-colors">Inicio</a></li>
+                <li><a href="#catalogo" class="hover:text-sky-300 transition-colors">Catálogo</a></li>
+                <li><a href="#contacto" class="hover:text-sky-300 transition-colors">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <!-- Hero Section -->
+        <section id="inicio" class="relative bg-stone-900 text-white py-16 px-4 overflow-hidden border-b border-stone-800">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="inline-block px-3 py-1 bg-rose-950/80 text-rose-300 border border-rose-800/50 rounded-full text-xs tracking-wider uppercase font-semibold">Colección Exclusiva 2026</span>
+                    <h1 class="font-serif-custom text-4xl sm:text-5xl lg:text-6xl text-stone-100 leading-tight">
+                        Elegancia y claridad para tu mirada.
+                    </h1>
+                    <p class="text-stone-300 text-base sm:text-lg font-light leading-relaxed">
+                        En Pretty Eyes diseñamos marcos que fusionan tendencia, materiales ultralivianos y detalles enjoyados para resaltar la belleza natural de tu rostro.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="https://wa.me/5493718332074" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-5 py-3 rounded-xl transition-all shadow-lg hover:shadow-emerald-900/30">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                            Consultar en WhatsApp
+                        </a>
+                        <a href="#catalogo" class="inline-flex items-center gap-2 bg-stone-800 hover:bg-stone-700 text-stone-200 font-medium px-5 py-3 rounded-xl transition-all border border-stone-700">
+                            Ver Catálogo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Foto 1 Destacada -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-sky-400 to-rose-400 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <div class="relative bg-stone-800 rounded-2xl overflow-hidden border border-stone-700 shadow-2xl">
+                        <img src="foto1.jfif" alt="Marco Celeste Transparente" class="w-full h-80 object-cover object-center group-hover:scale-105 transition duration-500">
+                        <div class="p-4 bg-stone-900/90 border-t border-stone-800">
+                            <span class="text-xs text-sky-400 font-semibold uppercase tracking-wider">Modelo Destacado</span>
+                            <h3 class="text-lg font-serif-custom text-white">Celeste Sky Pure</h3>
+                            <p class="text-xs text-stone-400">Marco celeste de tono pastel con finos tallados laterales en soporte mineral.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Galería de Productos (5 Fotos) -->
+        <section id="catalogo" class="py-16 px-4 max-w-6xl mx-auto w-full">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="font-serif-custom text-3xl sm:text-4xl text-stone-900 mb-3">Colección Exclusiva Pretty Eyes</h2>
+                <p class="text-stone-600 text-sm sm:text-base">
+                    Diseños seleccionados cuidadosamente para brindarte la mayor distinción y confort visual.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card Foto 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-60 bg-stone-100 overflow-hidden relative">
+                        <img src="foto1.jfif" alt="Marco celeste claro" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 right-3 bg-sky-100 text-sky-800 text-xs px-2.5 py-1 rounded-full font-medium">Recetado</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif-custom text-xl text-stone-900">1. Celeste Sky</h3>
+                            <p class="text-xs text-stone-500 mt-1">Marco transparente celeste pastel en silueta redondeada y delicada.</p>
+                        </div>
+                        <a href="https://wa.me/5493718332074?text=Hola!%20Me%20interesa%20el%20modelo%20Celeste%20Sky" target="_blank" class="w-full text-center bg-stone-100 hover:bg-stone-800 hover:text-white text-stone-800 font-medium text-xs py-2.5 rounded-lg transition-colors">Consultar Disponibilidad</a>
+                    </div>
+                </div>
+
+                <!-- Card Foto 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-60 bg-stone-100 overflow-hidden relative">
+                        <img src="foto2.jfif" alt="Marco lila con pedrería" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 right-3 bg-purple-100 text-purple-800 text-xs px-2.5 py-1 rounded-full font-medium">Lujo / Pedrería</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif-custom text-xl text-stone-900">2. Lila Glam Jewels</h3>
+                            <p class="text-xs text-stone-500 mt-1">Marco ultra fino en tono lila decorado con pequeños cristales destellantes.</p>
+                        </div>
+                        <a href="https://wa.me/5493718332074?text=Hola!%20Me%20interesa%20el%20modelo%20Lila%20Glam" target="_blank" class="w-full text-center bg-stone-100 hover:bg-stone-800 hover:text-white text-stone-800 font-medium text-xs py-2.5 rounded-lg transition-colors">Consultar Disponibilidad</a>
+                    </div>
+                </div>
+
+                <!-- Card Foto 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-60 bg-stone-100 overflow-hidden relative">
+                        <img src="foto3.jfif" alt="Marco negro mate aviador" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 right-3 bg-stone-200 text-stone-800 text-xs px-2.5 py-1 rounded-full font-medium">Clásico Urbano</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif-custom text-xl text-stone-900">3. Black Aviator Matte</h3>
+                            <p class="text-xs text-stone-500 mt-1">Marco negro mate con grabado geométrico superior de alto impacto.</p>
+                        </div>
+                        <a href="https://wa.me/5493718332074?text=Hola!%20Me%20interesa%20el%20modelo%20Black%20Aviator" target="_blank" class="w-full text-center bg-stone-100 hover:bg-stone-800 hover:text-white text-stone-800 font-medium text-xs py-2.5 rounded-lg transition-colors">Consultar Disponibilidad</a>
+                    </div>
+                </div>
+
+                <!-- Card Foto 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-60 bg-stone-100 overflow-hidden relative">
+                        <img src="foto4.jfif" alt="Lentes de sol oscuros" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 right-3 bg-amber-100 text-amber-800 text-xs px-2.5 py-1 rounded-full font-medium">Sol UV400</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif-custom text-xl text-stone-900">4. Dark Bronze Sun</h3>
+                            <p class="text-xs text-stone-500 mt-1">Lentes de sol con cristal degradé oscuro y borde texturizado en titanio.</p>
+                        </div>
+                        <a href="https://wa.me/5493718332074?text=Hola!%20Me%20interesa%20el%20modelo%20Dark%20Bronze%20Sun" target="_blank" class="w-full text-center bg-stone-100 hover:bg-stone-800 hover:text-white text-stone-800 font-medium text-xs py-2.5 rounded-lg transition-colors">Consultar Disponibilidad</a>
+                    </div>
+                </div>
+
+                <!-- Card Foto 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col sm:col-span-2 lg:col-span-1">
+                    <div class="h-60 bg-stone-100 overflow-hidden relative">
+                        <img src="foto5.jfif" alt="Lentes de sol rojo borgoña" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 right-3 bg-rose-100 text-rose-800 text-xs px-2.5 py-1 rounded-full font-medium">Sol / Borgoña</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif-custom text-xl text-stone-900">5. Ruby Red Luxury</h3>
+                            <p class="text-xs text-stone-500 mt-1">Edición especial en tono rojo borgoña con cristales oscuros y brillos finos.</p>
+                        </div>
+                        <a href="https://wa.me/5493718332074?text=Hola!%20Me%20interesa%20el%20modelo%20Ruby%20Red" target="_blank" class="w-full text-center bg-stone-100 hover:bg-stone-800 hover:text-white text-stone-800 font-medium text-xs py-2.5 rounded-lg transition-colors">Consultar Disponibilidad</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tabla Informativa Comparativa -->
+        <section class="py-12 bg-stone-100 border-y border-stone-200 px-4">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="font-serif-custom text-2xl text-stone-900 mb-6 text-center">Tabla Comparativa de Materiales</h3>
+                <div class="overflow-x-auto rounded-xl shadow-sm border border-stone-200 bg-white">
+                    <table class="w-full text-left text-xs sm:text-sm text-stone-700">
+                        <thead class="bg-stone-800 text-stone-200 uppercase font-medium text-[11px] tracking-wider">
+                            <tr>
+                                <th class="p-3.5">Modelo</th>
+                                <th class="p-3.5">Material del Marco</th>
+                                <th class="p-3.5">Uso Recomendado</th>
+                                <th class="p-3.5">Detalles</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-stone-200">
+                            <tr class="hover:bg-stone-50">
+                                <td class="p-3.5 font-medium text-stone-900">Celeste Sky</td>
+                                <td class="p-3.5">Acetato Traslúcido</td>
+                                <td class="p-3.5">Uso Diario / Lectura</td>
+                                <td class="p-3.5">Ligero e Incoloro</td>
+                            </tr>
+                            <tr class="hover:bg-stone-50">
+                                <td class="p-3.5 font-medium text-stone-900">Lila Glam</td>
+                                <td class="p-3.5">Metal Fino + Zirconias</td>
+                                <td class="p-3.5">Eventos / Distinción</td>
+                                <td class="p-3.5">Gema y Brillos</td>
+                            </tr>
+                            <tr class="hover:bg-stone-50">
+                                <td class="p-3.5 font-medium text-stone-900">Black Aviator</td>
+                                <td class="p-3.5">Polímero Mate Resistente</td>
+                                <td class="p-3.5">Uso Urbano y Trabajo</td>
+                                <td class="p-3.5">Grabado Superior</td>
+                            </tr>
+                            <tr class="hover:bg-stone-50">
+                                <td class="p-3.5 font-medium text-stone-900">Dark Bronze</td>
+                                <td class="p-3.5">Aleación Metálica Bronce</td>
+                                <td class="p-3.5">Protección Solar UV400</td>
+                                <td class="p-3.5">Lente Degradé</td>
+                            </tr>
+                            <tr class="hover:bg-stone-50">
+                                <td class="p-3.5 font-medium text-stone-900">Ruby Red</td>
+                                <td class="p-3.5">Titanio Rojo Borgoña</td>
+                                <td class="p-3.5">Protección Solar Fashion</td>
+                                <td class="p-3.5">Textura Brillante</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artículo de Cuidado y Recomendaciones de Rostro -->
+        <section id="guia" class="py-16 px-4 max-w-4xl mx-auto">
+            <article class="prose prose-stone max-w-none">
+                <span class="text-xs font-semibold uppercase tracking-wider text-rose-600">Guía de Asesoramiento</span>
+                <h2 class="font-serif-custom text-3xl text-stone-900 mt-1 mb-4">¿Cómo elegir el marco ideal según la forma de tu rostro?</h2>
+                <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+                    Elegir anteojos va más allá de la graduación médica; es un accesorio clave que enmarca tus expresiones. La regla general es buscar el **contraste de formas** entre el contorno de tu rostro y el armazón.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-6 my-6 not-prose">
+                    <div class="bg-rose-50/50 p-5 rounded-xl border border-rose-100">
+                        <h4 class="font-serif-custom text-stone-900 font-bold mb-1">Rostro Redondo u Ovalado</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Favorecen las formas angulares y geométricas como el modelo <strong>Black Aviator</strong> o marcos marcadamente rectangulares para definir los rasgos.</p>
+                    </div>
+                    <div class="bg-sky-50/50 p-5 rounded-xl border border-sky-100">
+                        <h4 class="font-serif-custom text-stone-900 font-bold mb-1">Rostro Cuadrado o Anguloso</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Se benefician de curvas suaves y marcos redondeados como el <strong>Celeste Sky</strong> o <strong>Lila Glam</strong> para suavizar las líneas de la mandíbula.</p>
+                    </div>
+                </div>
+
+                <h3 class="font-serif-custom text-xl text-stone-900 mt-6 mb-3">Recomendaciones para mantener el brillo de tus marcos</h3>
+                <ul class="list-disc pl-5 text-xs sm:text-sm text-stone-600 space-y-2">
+                    <li>Utiliza siempre microfibra limpia para no rayar los cristales.</li>
+                    <li>Limpia la pedrería y apliques brillantes únicamente con agua tibia y jabón neutro.</li>
+                    <li>No dejes tus anteojos de sol expuestos sobre el tablero del auto a altas temperaturas.</li>
+                    <li>Guárdalos siempre en su estuche rígido original de <strong>Pretty Eyes</strong>.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Sección de Contacto y Redes -->
+        <section id="contacto" class="bg-stone-900 text-stone-200 py-16 px-4 mt-auto border-t border-stone-800">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+                
+                <!-- Info y Redes -->
+                <div class="space-y-6">
+                    <h2 class="font-serif-custom text-3xl text-rose-200">Atención y Ventas Pretty Eyes</h2>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Estamos a tu disposición para asesorarte sobre disponibilidad, envíos o toma de graduaciones. Escríbenos directamente a través de nuestras redes oficiales.
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <!-- Botón WhatsApp -->
+                        <a href="https://wa.me/5493718332074" target="_blank" class="flex items-center gap-3 bg-emerald-900/40 border border-emerald-700/50 hover:bg-emerald-800/50 text-emerald-200 p-3.5 rounded-xl transition-all">
+                            <span class="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold text-xs">WA</span>
+                            <div>
+                                <div class="text-xs text-emerald-400 font-semibold uppercase">WhatsApp Oficial</div>
+                                <div class="text-sm font-medium">+54 9 3718 332074</div>
+                            </div>
+                        </a>
+
+                        <!-- Botón Facebook -->
+                        <a href="https://www.facebook.com/belen.espinoza.1848" target="_blank" class="flex items-center gap-3 bg-blue-900/40 border border-blue-700/50 hover:bg-blue-800/50 text-blue-200 p-3.5 rounded-xl transition-all">
+                            <span class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xs">FB</span>
+                            <div>
+                                <div class="text-xs text-blue-400 font-semibold uppercase">Facebook Personal / Boutique</div>
+                                <div class="text-sm font-medium">belen.espinoza.1848</div>
+                            </div>
+                        </a>
+
+                        <!-- Botón Salud Visual OMS -->
+                        <a href="https://www.who.int/es" target="_blank" class="flex items-center gap-3 bg-stone-800 border border-stone-700 hover:bg-stone-700 text-stone-300 p-3.5 rounded-xl transition-all">
+                            <span class="w-8 h-8 rounded-full bg-stone-600 flex items-center justify-center text-white font-bold text-xs">OMS</span>
+                            <div>
+                                <div class="text-xs text-stone-400 font-semibold uppercase">Sitio Web Externo Requerido</div>
+                                <div class="text-sm font-medium">Salud Visual (Organización Mundial de la Salud)</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="bg-stone-800/60 p-6 sm:p-8 rounded-2xl border border-stone-700/60 shadow-xl">
+                    <h3 class="font-serif-custom text-xl text-stone-100 mb-4">Envíanos un mensaje</h3>
+                    <form onsubmit="alert('¡Gracias por tu mensaje! Nos pondremos en contacto a la brevedad.'); return false;" class="space-y-4 text-xs sm:text-sm">
+                        <div>
+                            <label class="block text-stone-300 font-medium mb-1">Nombre y Apellido:</label>
+                            <input type="text" required class="w-full bg-stone-900 border border-stone-700 rounded-lg p-2.5 text-stone-100 focus:outline-none focus:border-rose-400" placeholder="Ej: María Belén">
+                        </div>
+                        <div>
+                            <label class="block text-stone-300 font-medium mb-1">Correo Electrónico:</label>
+                            <input type="email" required class="w-full bg-stone-900 border border-stone-700 rounded-lg p-2.5 text-stone-100 focus:outline-none focus:border-rose-400" placeholder="tuemail@ejemplo.com">
+                        </div>
+                        <div>
+                            <label class="block text-stone-300 font-medium mb-1">Modelo de interés:</label>
+                            <select class="w-full bg-stone-900 border border-stone-700 rounded-lg p-2.5 text-stone-100 focus:outline-none focus:border-rose-400">
+                                <option>Celeste Sky Transparente</option>
+                                <option>Lila Glam con Pedrería</option>
+                                <option>Black Aviator Mate</option>
+                                <option>Dark Bronze Sun</option>
+                                <option>Ruby Red Luxury</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-stone-300 font-medium mb-1">Consulta:</label>
+                            <textarea rows="3" required class="w-full bg-stone-900 border border-stone-700 rounded-lg p-2.5 text-stone-100 focus:outline-none focus:border-rose-400" placeholder="Escribe tus dudas sobre cristales o stock..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-rose-800 hover:bg-rose-700 text-white font-medium py-3 rounded-lg transition-colors shadow-md">
+                            Enviar Consulta
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+            
+            <div class="max-w-5xl mx-auto border-t border-stone-800 mt-12 pt-6 text-center text-xs text-stone-500">
+                &copy; 2026 Pretty Eyes - Muestra interactiva de proyecto escolar.
+            </div>
+        </section>
+
+    </div>
+
+    <!-- CONTENEDOR 2: MODO HTML PURO (CÓDIGO DE ENTREGA ESCOLAR SIN CSS) -->
+    <div id="pureMode" class="hidden flex-1 p-6 sm:p-12 max-w-4xl mx-auto bg-white my-6 border border-stone-300 shadow-sm rounded-none text-black font-serif">
+        
+        <div class="mb-6 p-4 bg-amber-50 border border-amber-300 text-amber-900 text-xs font-sans rounded">
+            <strong>📌 Nota de Entrega Escolar:</strong> Esta es la vista exacta de cómo se renderiza el código HTML5 puro de tu entrega, sin estilos CSS adicionales, respetando al 100% las consignas solicitadas por la cátedra.
+        </div>
+
+        <hr class="my-4">
+
+        <!-- INICIO DE ESTRUCTURA HTML PURO -->
+        <header>
+            <h1>Pretty Eyes</h1>
+            <p>Estilo, tendencia y la mejor visión para tus ojos</p>
+            
+            <nav>
+                <ul>
+                    <li><a href="#pure-inicio">Inicio</a></li>
+                    <li><a href="#pure-coleccion">Colección y Consejos</a></li>
+                    <li><a href="#pure-contacto">Contacto y Consultas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="pure-inicio">
+                <h2>Bienvenidos a Pretty Eyes</h2>
+                <p>En Pretty Eyes nos especializamos en encontrar el marco perfecto para complementar tu estilo personal y resaltar la belleza natural de tu mirada.</p>
+                <p>Trabajamos con materiales livianos, resistentes y diseños exclusivos de última tendencia para el uso diario, de lectura o de sol.</p>
+                <p>Nuestro modelo destacado de la temporada en marco celeste claro transparente:</p>
+                
+                <img src="watermarked_img_62511882597781981.jpg" alt="Marco celeste claro transparente Pretty Eyes" width="300">
+            </section>
+
+            <br><hr><br>
+
+            <section id="pure-coleccion">
+                <h2>Nuestra Colección Exclusiva</h2>
+                <p>Explora la variedad de estilos y acabados que tenemos disponibles en nuestro catálogo:</p>
+                
+                <p><strong>Modelo 2: Lila Glam con Pedrería</strong></p>
+                <img src="watermarked_img_601079222680306112.jpg" alt="Marco lila con brillos y piedras" width="220">
+
+                <p><strong>Modelo 3: Black Aviator Mate</strong></p>
+                <img src="watermarked_img_6382997595404628059.jpg" alt="Marco negro mate geométrico" width="220">
+
+                <p><strong>Modelo 4: Dark Bronze Sun</strong></p>
+                <img src="watermarked_img_9030267961406891026.jpg" alt="Lentes de sol oscuros estilo aviador" width="220">
+
+                <article>
+                    <h3>¿Cómo elegir y cuidar tus marcos Pretty Eyes?</h3>
+                    <p>Para mantener tus armazones impecables y conservar su brillo original por mucho tiempo, te sugerimos seguir estas recomendaciones:</p>
+
+                    <h4>Consejos de cuidado:</h4>
+                    <ul>
+                        <li>Lava tus lentes siempre con agua tibia y jabón neutro.</li>
+                        <li>Límpialos suavemente utilizando exclusivamente paños de microfibra.</li>
+                        <li>Guárdalos en su estuche rígido de protección cuando no los uses.</li>
+                        <li>Evita exponerlos a fuentes de calor directo o dejar la silicona al sol.</li>
+                    </ul>
+
+                    <h4>Guía de Estilos y Materiales</h4>
+                    <table border="1" cellpadding="5">
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Detalle / Material</th>
+                                <th>Ocasión Recomendada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Celeste Sky</td>
+                                <td>Acetato traslúcido celeste</td>
+                                <td>Uso diario y urbano</td>
+                            </tr>
+                            <tr>
+                                <td>Lila Glam</td>
+                                <td>Marco fino con apliques y pedrería</td>
+                                <td>Eventos y estilo elegante</td>
+                            </tr>
+                            <tr>
+                                <td>Black Matte</td>
+                                <td>Estructura resistente en negro mate</td>
+                                <td>Estilo clásico y formal</td>
+                            </tr>
+                            <tr>
+                                <td>Red Luxury</td>
+                                <td>Lentes de sol en tono rojo con texturas</td>
+                                <td>Protección solar con presencia</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <br>
+                <p><strong>Modelo 5: Ruby Red Luxury (Lentes de Sol)</strong></p>
+                <img src="watermarked_img_36060316184479178.jpg" alt="Lentes de sol rojos de diseño elegante" width="300">
+            </section>
+
+            <br><hr><br>
+
+            <section id="pure-contacto">
+                <h2>Contacto y Redes Sociales</h2>
+                
+                <p>Para aprender más sobre el cuidado de tu visión, consulta el sitio web de la <a href="https://www.who.int/es" target="_blank">Organización Mundial de la Salud</a>.</p>
+
+                <p>Comunícate directamente con nosotros para realizar tu pedido o consultar stock:</p>
+                <ul>
+                    <li><a href="https://wa.me/5493718332074" target="_blank">Escríbenos por WhatsApp (3718-332074)</a></li>
+                    <li><a href="https://www.facebook.com/belen.espinoza.1848" target="_blank">Visita nuestra página de Facebook (belen.espinoza.1848)</a></li>
+                </ul>
+
+                <h3>Consulta o Asesoramiento Personalizado</h3>
+                <form onsubmit="return false;">
+                    <label for="p_nombre">Nombre y Apellido:</label><br>
+                    <input type="text" id="p_nombre" name="nombre"><br><br>
+
+                    <label for="p_email">Correo electrónico:</label><br>
+                    <input type="email" id="p_email" name="email"><br><br>
+
+                    <label for="p_modelo">Modelo de anteojo que te interesa:</label><br>
+                    <input type="text" id="p_modelo" name="modelo"><br><br>
+
+                    <label for="p_mensaje">Consulta o mensaje:</label><br>
+                    <textarea id="p_mensaje" name="mensaje" rows="4" cols="30"></textarea><br><br>
+
+                    <input type="submit" value="Enviar Consulta">
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Lógica JS simple para cambiar de modo -->
+    <script>
+        function setMode(mode) {
+            const visual = document.getElementById('visualMode');
+            const pure = document.getElementById('pureMode');
+            const btnVisual = document.getElementById('btnModeVisual');
+            const btnPure = document.getElementById('btnModePure');
+
+            if (mode === 'visual') {
+                visual.classList.remove('hidden');
+                pure.classList.add('hidden');
+                btnVisual.className = "px-3 py-1.5 rounded-lg transition-all font-medium bg-stone-100 text-stone-900 shadow";
+                btnPure.className = "px-3 py-1.5 rounded-lg transition-all font-medium text-stone-400 hover:text-white";
+            } else {
+                visual.classList.add('hidden');
+                pure.classList.remove('hidden');
+                btnPure.className = "px-3 py-1.5 rounded-lg transition-all font-medium bg-stone-100 text-stone-900 shadow";
+                btnVisual.className = "px-3 py-1.5 rounded-lg transition-all font-medium text-stone-400 hover:text-white";
+            }
+        }
+    </script>
+</body>
+</html>
